@@ -1,19 +1,19 @@
 
 
-=================
-Example Name Here
-=================
+${example_name_header}
+${example_name}
+${example_name_header}
 
-Short synopsis of the example.
+${short_description} ${long_description}
 
 Building the example
 ====================
 
-If this not a pure Python example place the instructions here on how to configure and build with CMake::
+Instructions on how to configure and build with CMake::
 
-  git clone https://github.com/you/your-example.git # maybe your example is somewhere else like: OpenCMISS-Examples
+  git clone https://github.com/OpenCMISS-Examples/${example_name}.git
   mkdir build
-  cmake -DOpenCMISSLibs_DIR=/path/to/opencmisslib/install ../your-example
+  cmake -DOpenCMISSLibs_DIR=/path/to/opencmisslib/install ../${example_name}
   make  # cmake --build . will also work here and is much more platform agnostic.
 
 Running the example
@@ -22,21 +22,21 @@ Running the example
 Explain how the example is run::
 
   cd build
-  ./src/fortran/XXXXXXXX
+  ./src/fortran/${example_name}.F90
 
 or maybe it is a Python only example::
 
   source /path/to/opencmisslibs/install/virtaul_environments/oclibs_venv_pyXY_release/bin/activate
-  python src/python/XXXXXXXX.py
+  python src/python/${example_name}.py
 
 where the XY in the path are the Python major and minor versions respectively.
 
 Prerequisites
 =============
 
-Are there any external sources that are required over and above CMake, OpenCMISS libraries.  Sources like meshes which might be stored outside of the example itself.
+${external_sources}
 
 License
 =======
 
-A line on the license applicable to this example.
+Apache 2.0 License

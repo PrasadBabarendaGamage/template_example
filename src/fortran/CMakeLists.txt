@@ -3,7 +3,7 @@
 # .F90 (using a capital *F* and not a lowercase one) CMake will automatically run the *C*
 # preprocessor on the file for us, saving us from specifying that through other means.
 # This is only necessary if the file requires the the *C* preprocessor.
-add_executable(XXXXXXXX ZZZZZZZZ.F90)
+add_executable(${example_name} ${example_name}.F90)
 
 # Set the required libraries for this executable.  Here we let CMake know which libraries
 # are required to link the application.  Now because the *opencmisslibs* is known to CMake 
@@ -15,5 +15,5 @@ add_executable(XXXXXXXX ZZZZZZZZ.F90)
 # MPI should also be linked into the application.  Once this issue is resolved we will no longer
 # be required to add this as a link library.  This only applies to examples making use of Iron, 
 # if the example is only using the Zinc library then MPI is not required at all.
-target_link_libraries(XXXXXXXX PUBLIC opencmisslibs mpi)
+target_link_libraries(${example_name} PUBLIC opencmisslibs mpi)
 

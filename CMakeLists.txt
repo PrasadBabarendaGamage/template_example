@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 # Declare the project name and version number and specify the languages
 # used.  We must specify the *C* language irrespective of whether we use 
 # it or not as it is required by MPI.
-project(XXXXXXXX VERSION 1.0.0 LANGUAGES C Fortran)
+project($example_name VERSION 1.0.0 LANGUAGES C Fortran)
 
 # Get CMake to find the OpenCMISS libraries.  Because the OpenCMISS libraries
 # are not usually available in the system directories we will have to 
